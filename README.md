@@ -9,7 +9,7 @@ echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/
 sudo apt-get update
 sudo apt-get install -y kubectl
 mkdir ~/.kube
-nano ~/.kube/config #add the content to connnect to youre k8s cluster
+nano ~/.kube/config #add the content to connnect to your k8s cluster
 ```
 
 Add podExec to /usr/bin/
