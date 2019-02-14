@@ -2,7 +2,7 @@
 # vdKolk @ Scienta - 2019
 
 # The namespace we should use:
-ns=scienta
+ns=default
 
 # Use sh or bash
 bash=$1
