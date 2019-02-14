@@ -17,7 +17,9 @@ dont forget to chmod +x
 
 # Usage
 podExec
+
 If you want to use `/bin/sh` instead of `/bin/bash` use:
+
 podExec sh
 
 Example:
