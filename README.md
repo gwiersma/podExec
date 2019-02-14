@@ -22,7 +22,7 @@ If you want to use `/bin/sh` instead of `/bin/bash` use:
 
 $ podExec sh
 
-$Example
+# Example
 ```
 username@ubuntubash:~$ podExec
 0       app-cbf9544f6-vxrnj
