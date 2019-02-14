@@ -2,7 +2,16 @@
 # vdKolk @ Scienta - 2019
 
 # The namespace we should use:
-ns=default
+ns=scienta
+
+# Use sh or bash
+bash=$1
+
+if [ "$bash" = ''  ]; then
+   bash="/bin/bash"
+ else
+   bash="/bin/sh"
+fi
 
 # Create an arry with active containers in the "default" namespace
 runningpods=($(kubectl get --no-headers=true pods --namespace $ns -o name | awk -F "/" '{print $2}'))
@@ -26,7 +35,7 @@ while [ $choice -eq 998 ]; do
 read choice
 
 # Connect to bash or not
-if [ $choice -eq 999 ] ; then
+if [ $choice -eq 999 ]; then
 
     exit;
 
@@ -40,7 +49,7 @@ if [ $choice -eq 999 ] ; then
 
    else
        echo "$(tput setaf 0)$(tput setab 2) podExec $(tput setaf 1) $(tput setab 7) "connecting to" ${runningpods[$choice]} "......." $(tput sgr 0)"
-       kubectl exec --namespace $ns -it ${runningpods[$choice]} -- /bin/bash
+       kubectl exec --namespace $ns -it ${runningpods[$choice]} -- $bash
 
   fi
 fi
