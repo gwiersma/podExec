@@ -15,7 +15,10 @@ nano ~/.kube/config #add the content to connnect to your k8s cluster
 Add podExec to /usr/bin/
 dont forget to chmod +x
 
-Then run podExec
+# Usage
+podExec
+If you want to use `/bin/sh` instead of `/bin/bash` use:
+podExec sh
 
 Example:
 ```
